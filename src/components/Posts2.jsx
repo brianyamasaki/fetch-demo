@@ -57,7 +57,7 @@ const Posts2 = () => {
     <div className="all-posts">
       <h1>Posts 2</h1>
       {renderPosts()}
-      <p>{errorMsg}</p>
+      <p className='show-error'>{errorMsg}</p>
     </div>
   )
 }

@@ -14,7 +14,7 @@ const Posts = () => {
     const fetchPosts = async () => {
       try {
         // fetchDataV1 requires the caller to use a TRY..CATCH.
-        const result = await fetchDataV1('https://jsonplaceholder.typicode.com/posts', {failureOdds: 0.5});
+        const result = await fetchDataV1('https://jsonplaceholder.typicode.com/posts', {failureOdds: 0.4});
         setPosts(result);
         const users = await fetchDataV1('https://randomuser.me/api/?results=101', {failureOdds: 0.5});
         setUsers(users.results);
@@ -56,7 +56,7 @@ const Posts = () => {
     <div className="all-posts">
       <h1>Posts</h1>
       {renderPosts()}
-      <p>{errorMsg}</p>
+      <p className="show-error">{errorMsg}</p>
     </div>
   )
 }
